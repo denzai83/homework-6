@@ -7,7 +7,7 @@ import sys
 def normalize(name):
 
     CYRILLIC_SYMBOLS = "абвгдеёжзийклмнопрстуфхцчшщъыьэюяєіїґ"
-    TRANSLATION = ("a", "b", "v", "g", "d", "e", "e", "zh", "z", "y", "j", "k", "l", "m", "n", "o", "p", "r", "s", "t", "u",
+    TRANSLATION = ("a", "b", "v", "g", "d", "e", "e", "zh", "z", "i", "j", "k", "l", "m", "n", "o", "p", "r", "s", "t", "u",
                    "f", "h", "ts", "ch", "sh", "sch", "", "y", "", "e", "yu", "ya", "je", "i", "ji", "g")
 
     TRANS = {}
@@ -23,7 +23,7 @@ def normalize(name):
     return new_name
 
 
-if __name__ == "__main__":
+def main():
 
     basepath = os.path.abspath(sys.argv[1])
 
@@ -71,3 +71,7 @@ if __name__ == "__main__":
                 os.rmdir(root)
             finally:
                 continue
+
+
+if __name__ == "__main__":
+    main()
